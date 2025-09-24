@@ -1,27 +1,27 @@
-// Load the tvBrandCount.csv file from /data
-d3.csv("data/tvBrandCount.csv", d => {
-    console.log(d); // inspect raw rows as they stream in
-});
+// // Load the tvBrandCount.csv file from /data
+// d3.csv("data/tvBrandCount.csv", d => {
+//     console.log(d); // inspect raw rows as they stream in
+// });
 
-d3.csv("data/tvBrandCount.csv", d => {
-    return {
-        brand: d.brand,
-        count: +d.count // '+' converts string to number
-    };
-}).then(data => {
-    console.log(data); // array of typed objects
-});
+// d3.csv("data/tvBrandCount.csv", d => {
+//     return {
+//         brand: d.brand,
+//         count: +d.count // '+' converts string to number
+//     };
+// }).then(data => {
+//     console.log(data); // array of typed objects
+// });
 
 /* Stub: will draw the chart in T04-5 */
-function createBarChart(data) {
-  console.log("createBarChart received", data.length, "rows");
-}
+// function createBarChart(data) {
+//   console.log("createBarChart received", data.length, "rows");
+// }
 /* Load CSV, Convert Type, Quick Check */
 d3.csv("data/tvBrandCount.csv", d => ({
     brand: d.brand,
     count: +d.count
 })).then(data => {
-// Quick check
+    // Quick check
     console.log(data); // whole array
     console.log("rows:", data.length);
     console.log("max:", d3.max(data, d => d.count));
